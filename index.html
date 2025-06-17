@@ -87,7 +87,8 @@
 <script>
   document.querySelectorAll('.toggle-details-btn').forEach(button => {
     button.addEventListener('click', () => {
-      const details = button.nextElementSibling;
+      const productDiv = button.closest('.product');
+      const details = productDiv.querySelector('.details');
       if (details.style.display === 'block') {
         details.style.display = 'none';
         button.textContent = 'Подробнее';
@@ -120,3 +121,12 @@
             price: priceText
           })
         });
+
+        // Остальной код обработки ответа
+      } catch (error) {
+        statusDiv.style.color = 'red';
+        statusDiv.textContent = 'Ошибка отправки заказа.';
+      }
+    });
+  });
+</script>
