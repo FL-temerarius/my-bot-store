@@ -4,59 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Продукты</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 0 15px;
-    }
-    .product {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 15px;
-      margin-bottom: 15px;
-    }
-    .product-title {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
-    .details {
-      display: none;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid #ddd;
-    }
-    button {
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 4px;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    .order-status {
-      margin-top: 8px;
-      font-style: italic;
-      color: green;
-    }
-  </style>
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+    background: #fff; /* White background for readability */
+    color: #222;      /* Dark gray text for contrast */
+  }
+  .product {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f8f9fa; /* Light gray for cards */
+  }
+  .product-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #111; /* Even darker for titles */
+  }
+  .details {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    color: #222;
+  }
+  button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  .order-status {
+    margin-top: 8px;
+    font-style: italic;
+    color: green;
+  }
+</style>
 </head>
 <body>
 
-  <h1>Наши продукты</h1>
+  <h1>Мои продукты:</h1>
 
   <div class="product" id="product1">
     <div class="product-title">Бот для опросов</div>
     <button class="toggle-details-btn">Подробнее</button>
     <div class="details">
-      <p><strong>Полное описание:</strong> Это отличный бот, который поможет вам в провдении опросов.</p>
-      <p><strong>Цена:</strong> 15000 ₽</p>
+      <p><strong>Полное описание:</strong> Это супер-удобный бот, который поможет вам в провдении опросов.</p>
+      <p><strong>Цена:</strong> 15 000 ₽</p>
       <button class="order-btn">Заказать</button>
       <div class="order-status"></div>
     </div>
@@ -66,8 +71,8 @@
     <div class="product-title">Бот для составления каталогов</div>
     <button class="toggle-details-btn">Подробнее</button>
     <div class="details">
-      <p><strong>Полное описание:</strong> Идеальное решение для вашего бизнеса.</p>
-      <p><strong>Цена:</strong> 25000 ₽</p>
+      <p><strong>Полное описание:</strong> Идеальное решение для вашего бизнеса или для частного использования.</p>
+      <p><strong>Цена:</strong> 25 000 ₽</p>
       <button class="order-btn">Заказать</button>
       <div class="order-status"></div>
     </div>
@@ -77,8 +82,8 @@
     <div class="product-title">Умная таблица для генерации контента</div>
     <button class="toggle-details-btn">Подробнее</button>
     <div class="details">
-      <p><strong>Полное описание:</strong> Интеграция с ИИ. Готовые промпты и роли. Все что нужнодля создания контента для телеграм канала.</p>
-      <p><strong>Цена:</strong> 15000 ₽</p>
+      <p><strong>Полное описание:</strong> Интеграция с ИИ. Готовые промпты и роли. Все, что нужно для создания контента для телеграм канала.</p>
+      <p><strong>Цена:</strong> 15 000 ₽</p>
       <button class="order-btn">Заказать</button>
       <div class="order-status"></div>
     </div>
