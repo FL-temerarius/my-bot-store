@@ -82,7 +82,7 @@
     <div class="product-title">Бот для составления каталогов</div>
     <button class="toggle-details-btn">Подробнее</button>
     <div class="details">
-      <p><strong>Полное описание:</strong> Идеальное решение для вашего бизнеса или для частного использования. Вы набрасываете в бот картинки и комментарии к ним. Бот сохраняет их в таблицу, а также расхифровывает и переводит при необходимости. К одному фото/скриншоту можно добавить до 8-9 комменатриев по разным темам. Таким образом можно вести учет товаров, создавать каталоги фото, осовбодить телефон от лишней информации, создавать фото-отчеты с врменными метками и так далее.</p>
+      <p><strong>Полное описание:</strong> Идеальное решение для вашего бизнеса или для частного использования. Вы набрасываете в бот картинки, фото, скриншоты и комментарии к ним. Бот сохраняет их в таблицу, а также расшифровывает (распознает текст на изображении) и переводит его при необходимости на русский или английский язык (при желании - можно подключить любой другой). К одному фото/скриншоту можно добавить до 8-9 комменатриев по разным темам. Таким образом можно вести учет и инвентаризацию товаров, продуктов, покупок, счетов, либо разбор гардероба и летних-зимних вещей, создавать каталоги фото и детских поделок, осовободить телефон от лишней информации, создавать фото-отчеты с временными метками и так далее.</p>
       <p><strong>Промокод:</strong>KatalogBot</p>
       <button class="order-btn">Получить предложение</button>
       <div class="order-status"></div>
@@ -176,6 +176,17 @@
       <div class="order-status"></div>
     </div>
   </div>
+
+   <div class="product" id="product12">
+    <div class="product-title">Бот Бухгалтер</div>
+    <button class="toggle-details-btn">Подробнее</button>
+    <div class="details">
+      <p><strong>Полное описание:</strong>Простой бот для учета доходов и расходов. К записям можно добавлять комментарии (категории или к какому счету или валюте относится запись). Каждой записи присваивается временная метка. По запросу (простым нажатием кнопки) можно получить от бота список расходов, доходов за определенный период или уточнить текущий баланс.</p>
+      <p><strong>Промокод:</strong>BudjetBot</p>
+      <button class="order-btn">Получить предложение</button>
+      <div class="order-status"></div>
+    </div>
+  </div>
   
 <script>
   document.querySelectorAll('.toggle-details-btn').forEach(button => {
@@ -198,6 +209,7 @@
      // const title = productDiv.querySelector('.product-title').textContent.trim();
      // const description = productDiv.querySelector('.details p strong').nextSibling.textContent.trim();
       const priceText = productDiv.querySelector('.details p:nth-child(2)').textContent.trim();
+      const priceOnly = priceText.replace(/^Промокод:\s*/, ''); // Removes "Цена: " from the start
      // const statusDiv = productDiv.querySelector('.order-status');
 
       //statusDiv.style.color = 'black';
@@ -215,7 +227,7 @@
         //   })
         // });
         // Здесь пример вызова URL - нужного нам
-        window.location.href = "https://t.me/privetDasha_bot?start=" + encodeURIComponent(priceText);
+        window.location.href = "https://t.me/privetDasha_bot?start=" + encodeURIComponent(priceOnly);
 
         // Остальной код обработки ответа
       } catch (error) {
